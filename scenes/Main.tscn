@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://dx1yssx2nt5hh"]
+
+[ext_resource type="Script" uid="uid://bg8b3bo6bqlg1" path="res://scenes/mainn.gd" id="1_0bbpv"]
+[ext_resource type="PackedScene" uid="uid://bhngc4xyngmb3" path="res://scenes/Coin.tscn" id="3_c01mt"]
+[ext_resource type="PackedScene" uid="uid://cjfiu04hon0a8" path="res://scenes/Platform.tscn" id="3_vcsgt"]
+[ext_resource type="Texture2D" uid="uid://c61op53621k8l" path="res://assets/fondo.png" id="4_rarhs"]
+[ext_resource type="PackedScene" uid="uid://ce3862wj0jiqv" path="res://scenes/honguito.tscn" id="5_vcsgt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aj2m5"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_dibd8"]
+font_size = 64
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 51
+shadow_offset = Vector2(2.875, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tfif2"]
+font_size = 24
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_koplb"]
+font_size = 32
+
+[node name="Main" type="Node2D" unique_id=1000818504]
+script = ExtResource("1_0bbpv")
+platform_scene = ExtResource("3_vcsgt")
+coin_scene = ExtResource("3_c01mt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=740616755]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1902052285]
+offset_right = 720.0
+offset_bottom = 1281.0
+texture = ExtResource("4_rarhs")
+
+[node name="Honguito" parent="." unique_id=568892122 instance=ExtResource("5_vcsgt")]
+
+[node name="Platform" parent="." unique_id=198402632 instance=ExtResource("3_vcsgt")]
+
+[node name="Timer" type="Timer" parent="." unique_id=542778623]
+autostart = true
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=554951381]
+
+[node name="ScoreLabel" type="Label" parent="UILayer" unique_id=1769421714]
+offset_left = 40.0
+offset_top = 46.0
+offset_right = 89.0
+offset_bottom = 73.0
+text = "0"
+label_settings = SubResource("LabelSettings_aj2m5")
+
+[node name="GameOverPanel" type="Control" parent="UILayer" unique_id=803257055]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOverLabel" type="Label" parent="UILayer/GameOverPanel" unique_id=1007097480]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.0
+offset_top = -96.0
+offset_right = 184.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_dibd8")
+horizontal_alignment = 1
+
+[node name="RestartLabel" type="Label" parent="UILayer/GameOverPanel" unique_id=1733353455]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -2.0
+offset_right = 172.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pulsa ESPACIO para reiniciar"
+label_settings = SubResource("LabelSettings_tfif2")
+horizontal_alignment = 1
+
+[node name="CoinLabel" type="Label" parent="UILayer" unique_id=173193232]
+offset_left = 613.0
+offset_top = 49.0
+offset_right = 684.0
+offset_bottom = 94.0
+text = "🪙 0"
+label_settings = SubResource("LabelSettings_koplb")

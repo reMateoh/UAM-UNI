@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://ce3862wj0jiqv"]
+
+[ext_resource type="Script" uid="uid://d10pplfpwqrmq" path="res://scenes/honguito.gd" id="1_mkhso"]
+[ext_resource type="Texture2D" uid="uid://dsq1qtk5v1f0q" path="res://assets/sprites/Mushroom_1.png" id="1_rsu48"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rxm0"]
+atlas = ExtResource("1_rsu48")
+region = Rect2(96, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w713"]
+atlas = ExtResource("1_rsu48")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6gje"]
+atlas = ExtResource("1_rsu48")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mecql"]
+atlas = ExtResource("1_rsu48")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pimj8"]
+atlas = ExtResource("1_rsu48")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4buy2"]
+atlas = ExtResource("1_rsu48")
+region = Rect2(0, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utyx0"]
+atlas = ExtResource("1_rsu48")
+region = Rect2(48, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bljl6"]
+atlas = ExtResource("1_rsu48")
+region = Rect2(72, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idth6"]
+atlas = ExtResource("1_rsu48")
+region = Rect2(24, 96, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w7mgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rxm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5w713")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6gje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mecql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pimj8")
+}],
+"loop": 1,
+"name": &"salto frontal",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4buy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utyx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bljl6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idth6")
+}],
+"loop": 1,
+"name": &"salto lateral",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h4t55"]
+radius = 21.0
+
+[node name="Honguito" type="CharacterBody2D" unique_id=568892122]
+script = ExtResource("1_mkhso")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=116178541]
+position = Vector2(6.5, 3.999998)
+scale = Vector2(2.0416665, 2.6666665)
+sprite_frames = SubResource("SpriteFrames_w7mgy")
+animation = &"salto frontal"
+frame_progress = 0.016884904
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=240369928]
+position = Vector2(7, 16)
+shape = SubResource("CircleShape2D_h4t55")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=29954777]
+position = Vector2(7, 16)
