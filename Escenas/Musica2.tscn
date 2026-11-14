@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c1ytty4yjbk2q"]
+
+[ext_resource type="AudioStream" uid="uid://bv81tny2n03ts" path="res://assets/music/Synth Grooves 14-11-2026 02-26.wav" id="1_4j2go"]
+
+[node name="Musica2" type="Node2D" unique_id=261176228]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1238710833]
+stream = ExtResource("1_4j2go")
+autoplay = true

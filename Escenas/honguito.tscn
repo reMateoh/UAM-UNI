@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ce3862wj0jiqv"]
 
+[ext_resource type="Script" uid="uid://d10pplfpwqrmq" path="res://Escenas/honguito.gd" id="1_mkhso"]
 [ext_resource type="Texture2D" uid="uid://dsq1qtk5v1f0q" path="res://assets/sprites/Mushroom_1.png" id="1_rsu48"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1rxm0"]
@@ -58,7 +59,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"salto frontal",
-"speed": 7.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -79,16 +80,21 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h4t55"]
-radius = 8.0
+radius = 21.0
 
 [node name="Honguito" type="CharacterBody2D" unique_id=568892122]
+script = ExtResource("1_mkhso")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=116178541]
-position = Vector2(3, -2)
+position = Vector2(6.5, 3.999998)
+scale = Vector2(2.0416665, 2.6666665)
 sprite_frames = SubResource("SpriteFrames_w7mgy")
-animation = &"salto lateral"
-frame_progress = 0.17140596
+animation = &"salto frontal"
+frame_progress = 0.58848614
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=240369928]
-position = Vector2(2.9999998, 2)
+position = Vector2(7, 16)
 shape = SubResource("CircleShape2D_h4t55")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=29954777]
+position = Vector2(7, 16)

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://w85l7b6pdnhw"]
+
+[ext_resource type="AudioStream" uid="uid://cr04uy6lr0b4f" path="res://assets/music/Modern Hip-Hop 14-11-2026 01-42.wav" id="1_u4fp1"]
+
+[node name="Music" type="Node2D" unique_id=1682878575]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=936951493]
+stream = ExtResource("1_u4fp1")
+autoplay = true

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b0q5jl7rkuu06"]
+
+[ext_resource type="Script" uid="uid://c2hb0bo6nw56g" path="res://character_body_2d.gd" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://mul142myrtgc" path="res://assets/mario.png" id="2_g2els"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_motb6"]
+size = Vector2(124.99997, 202.49997)
+
+[node name="Player" type="Node2D" unique_id=1509999458]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1897355266]
+script = ExtResource("1_3vyb7")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=234954411]
+position = Vector2(-26.2, 40)
+scale = Vector2(0.2, 0.20246914)
+texture = ExtResource("2_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1993661151]
+position = Vector2(-25.999994, 38.499996)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_motb6")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1024188374]

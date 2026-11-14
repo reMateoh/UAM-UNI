@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://co1uouh1vus57"
-path="res://.godot/imported/Milkshake Creps.otf-da590897fc1795df5f4ac82b775d950e.fontdata"
+path="res://.godot/imported/Milkshake Creps.otf-ad651e765478811f3c361391a61de869.fontdata"
 
 [deps]
 
-source_file="res://Milkshake Creps.otf"
-dest_files=["res://.godot/imported/Milkshake Creps.otf-da590897fc1795df5f4ac82b775d950e.fontdata"]
+source_file="res://assets/fonts/Milkshake Creps.otf"
+dest_files=["res://.godot/imported/Milkshake Creps.otf-ad651e765478811f3c361391a61de869.fontdata"]
 
 [params]
 

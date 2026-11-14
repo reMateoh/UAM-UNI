@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bv81tny2n03ts"
+path="res://.godot/imported/Synth Grooves 14-11-2026 02-26.wav-6b38718d51d7c004585bcf4dbaf296ef.sample"
+
+[deps]
+
+source_file="res://assets/music/Synth Grooves 14-11-2026 02-26.wav"
+dest_files=["res://.godot/imported/Synth Grooves 14-11-2026 02-26.wav-6b38718d51d7c004585bcf4dbaf296ef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
