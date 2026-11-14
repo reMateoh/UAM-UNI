@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://kjwbxyefw061"]
+
+[ext_resource type="Texture2D" uid="uid://cnswmajwlpk4s" path="res://Escenas/WhatsApp Image 2026-11-14 at 12.12.14 PM.jpeg" id="1_g86xt"]
+
+[node name="BackGround" type="Node2D" unique_id=1251438966]
+
+[node name="BackGroundImage" type="Parallax2D" parent="." unique_id=659578884]
+scroll_scale = Vector2(0, 0.3)
+repeat_size = Vector2(0, 3413)
+
+[node name="Sprite2D" type="Sprite2D" parent="BackGroundImage" unique_id=1893025921]
+position = Vector2(-495, -856)
+texture = ExtResource("1_g86xt")
+centered = false
